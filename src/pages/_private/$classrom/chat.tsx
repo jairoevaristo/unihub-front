@@ -43,9 +43,11 @@ function ChatPage() {
 
   useEffect(() => {
     const markAllAsRead = async () => {
-      const { data: messages } = await supabase.from('messages').select('id')
+      const { data: Datamessages } = await supabase
+        .from('messages')
+        .select('id')
 
-      const inserts = messages?.map((m) => ({
+      const inserts = Datamessages?.map((m) => ({
         message_id: m.id,
         user_id: user?.id,
         read_at: new Date().toISOString(),
@@ -96,7 +98,7 @@ function ChatPage() {
   }, [])
 
   const fetchMessages = async () => {
-    const { data, error } = await supabase
+    const { data } = await supabase
       .from('messages')
       .select('*')
       .order('created_at', { ascending: true })

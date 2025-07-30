@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react'
 import {
   ChevronLeft,
@@ -136,7 +134,7 @@ export default function StudantsTable() {
   const [students, setStudents] = useState(studentsData)
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState('all')
-  const [turmaFilter, setTurmaFilter] = useState('all')
+  const [turmaFilter] = useState('all')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 5
 

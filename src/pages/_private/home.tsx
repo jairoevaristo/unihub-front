@@ -1,24 +1,9 @@
 import { useUser } from '@clerk/clerk-react'
 import { createFileRoute } from '@tanstack/react-router'
-import { useQuery } from '@tanstack/react-query'
-import { useEffect } from 'react'
-import axios from 'axios'
 import { ProtectedRoute } from '@/components/protected-router'
 import { CardClassrom } from '@/components/card-classrom'
 import { ModalCreateClassrom } from '@/components/modal-create-classrom'
 import { ModalClassromParticipant } from '@/components/modal-classrom-participant'
-import { getAllCourses } from '@/services/get-courses'
-import { LoadingSpinner } from '@/components/spinner-loading'
-import { api } from '@/lib/axios'
-
-type GetCourses = {
-  UserIdentifier: string
-  Courses: Array<{
-    CourseId: string
-    Name: string
-    Code: string
-  }>
-}
 
 export const Route = createFileRoute('/_private/home')({
   component: () => (

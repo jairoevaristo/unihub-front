@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Calendar, Clock, Eye, FileText, Plus, Upload } from 'lucide-react'
+import { Calendar, Eye, FileText, Plus, Upload } from 'lucide-react'
 import { useUser } from '@clerk/clerk-react'
 import { toast } from 'sonner'
 import { createFileRoute } from '@tanstack/react-router'

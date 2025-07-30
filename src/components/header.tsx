@@ -2,7 +2,6 @@ import { UserButton } from '@clerk/clerk-react'
 import { Link, useLocation } from '@tanstack/react-router'
 import { BellIcon } from './icons'
 import { HeaderClassrom } from '@/pages/_private/$classrom/-components/header-classrom'
-import { UnreadMessagesBadge } from '@/pages/_private/$classrom/-components/cout-messages'
 
 const ROUTES_SHOW_HEADER = ['chat', 'news', 'task', 'dashboard', 'students']
 
