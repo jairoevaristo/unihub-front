@@ -7,7 +7,7 @@ import tanstackRouter from '@tanstack/router-plugin/vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    allowedHosts: ['bcc358e4f7fb.ngrok-free.app'],
+    allowedHosts: ['78a96c52e0f9.ngrok-free.app'],
     host: true,
   },
   plugins: [
